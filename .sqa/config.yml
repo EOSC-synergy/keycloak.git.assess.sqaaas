@@ -1,0 +1,60 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.8
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/eosc-kc/keycloak:
+      branch: master
+      repo: https://github.com/eosc-kc/keycloak.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/eosc-kc/keycloak git:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-coral-ferret.sh
+        container: qc.acc_pasty-purple-barb
+  QC.Doc:
+    repos:
+      github.com/eosc-kc/keycloak find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-viridian-hyrax.sh
+        container: qc.doc_zippy-ultramarine-seal
+      github.com/eosc-kc/keycloak git:
+        commands:
+        - /usr/bin/env sh .sqa/script.nerdy-maroon-ferret.sh
+        container: qc.doc_greasy-salmon-heron
+      github.com/eosc-kc/keycloak markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.homely-chartreuse-bandicoot.sh
+        container: qc.doc_jumpy-coral-heron
+  QC.Lic:
+    repos:
+      github.com/eosc-kc/keycloak licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.wimpy-zucchini-tortoise.sh
+        container: qc.lic_slimy-mustard-cat
+  QC.Sty:
+    repos:
+      github.com/eosc-kc/keycloak checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.gimpy-peach-newfoundland.sh
+        container: qc.sty_clammy-chartreuse-hare
+      github.com/eosc-kc/keycloak hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-cardinal-cheetah.sh
+        container: qc.sty_grumpy-blue-turtle
+      github.com/eosc-kc/keycloak jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-chocolate-mole.sh
+        container: qc.sty_ugly-ruby-birman
+  QC.Ver:
+    repos:
+      github.com/eosc-kc/keycloak get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-ultramarine-skunk.sh
+        container: qc.ver_breezy-firebrick-duck
+timeout: 5400
