@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.8
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/eosc-kc/keycloak:
       branch: master
@@ -15,46 +15,62 @@ sqa_criteria:
     repos:
       github.com/eosc-kc/keycloak git:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-coral-ferret.sh
-        container: qc.acc_pasty-purple-barb
+        - /usr/bin/env sh .sqa/script.freaky-orange-lynx.sh
+        container: qc.acc_skanky-pumpkin-monkey
   QC.Doc:
     repos:
       github.com/eosc-kc/keycloak find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-viridian-hyrax.sh
-        container: qc.doc_zippy-ultramarine-seal
+        - /usr/bin/env sh .sqa/script.scanty-yellow-starfish.sh
+        container: qc.doc_randy-orange-coati
       github.com/eosc-kc/keycloak git:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-maroon-ferret.sh
-        container: qc.doc_greasy-salmon-heron
+        - /usr/bin/env sh .sqa/script.wheezy-thistle-bandicoot.sh
+        container: qc.doc_hasty-cyan-collie
       github.com/eosc-kc/keycloak markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-chartreuse-bandicoot.sh
-        container: qc.doc_jumpy-coral-heron
+        - /usr/bin/env sh .sqa/script.pokey-sepia-lemming.sh
+        container: qc.doc_geeky-asparagus-grasshopper
   QC.Lic:
     repos:
       github.com/eosc-kc/keycloak licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-zucchini-tortoise.sh
-        container: qc.lic_slimy-mustard-cat
+        - /usr/bin/env sh .sqa/script.chewy-brown-wolf.sh
+        container: qc.lic_pokey-corn-dollar
+  QC.Sec:
+    repos:
+      github.com/eosc-kc/keycloak bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.surly-jade-bee.sh
+        container: qc.sec_chewy-peach-collie
   QC.Sty:
     repos:
       github.com/eosc-kc/keycloak checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-peach-newfoundland.sh
-        container: qc.sty_clammy-chartreuse-hare
+        - /usr/bin/env sh .sqa/script.blurry-heliotrope-walrus.sh
+        container: qc.sty_snappy-tomato-barnacle
+      github.com/eosc-kc/keycloak flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.lumpy-olivine-penguin.sh
+        container: qc.sty_snazzy-tangerine-tetra
       github.com/eosc-kc/keycloak hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-cardinal-cheetah.sh
-        container: qc.sty_grumpy-blue-turtle
+        - /usr/bin/env sh .sqa/script.cranky-pumpkin-barracuda.sh
+        container: qc.sty_lovely-tangerine-stoat
       github.com/eosc-kc/keycloak jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-chocolate-mole.sh
-        container: qc.sty_ugly-ruby-birman
+        - /usr/bin/env sh .sqa/script.squeaky-bistre-hyena.sh
+        container: qc.sty_lousy-crimson-barracuda
+  QC.Uni:
+    repos:
+      github.com/eosc-kc/keycloak pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.crappy-brass-fousek.sh
+        container: qc.uni_woolly-russet-wasp
   QC.Ver:
     repos:
       github.com/eosc-kc/keycloak get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-ultramarine-skunk.sh
-        container: qc.ver_breezy-firebrick-duck
+        - /usr/bin/env sh .sqa/script.squeaky-white-bongo.sh
+        container: qc.ver_clammy-flax-ant
 timeout: 5400
