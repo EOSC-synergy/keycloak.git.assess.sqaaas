@@ -2,59 +2,75 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.8
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/eosc-kc/keycloak:
-      branch: master
-      repo: https://github.com/eosc-kc/keycloak.git
+    github.com/keycloak/keycloak:
+      branch: main
+      repo: https://github.com/keycloak/keycloak.git
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/eosc-kc/keycloak git:
+      github.com/keycloak/keycloak git:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-coral-ferret.sh
-        container: qc.acc_pasty-purple-barb
+        - /usr/bin/env sh .sqa/script.crabby-turquoise-lizard.sh
+        container: qc.acc_breezy-viridian-wolf
   QC.Doc:
     repos:
-      github.com/eosc-kc/keycloak find_doc_files.py:
+      github.com/keycloak/keycloak find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-viridian-hyrax.sh
-        container: qc.doc_zippy-ultramarine-seal
-      github.com/eosc-kc/keycloak git:
+        - /usr/bin/env sh .sqa/script.ready-razzmatazz-buzzard.sh
+        container: qc.doc_sunny-alizarin-warthog
+      github.com/keycloak/keycloak git:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-maroon-ferret.sh
-        container: qc.doc_greasy-salmon-heron
-      github.com/eosc-kc/keycloak markdownlint:
+        - /usr/bin/env sh .sqa/script.hilly-magnolia-leopard.sh
+        container: qc.doc_grumpy-xanthic-spitz
+      github.com/keycloak/keycloak markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-chartreuse-bandicoot.sh
-        container: qc.doc_jumpy-coral-heron
+        - /usr/bin/env sh .sqa/script.gummy-wisteria-monkey.sh
+        container: qc.doc_crabby-turquoise-lemur
   QC.Lic:
     repos:
-      github.com/eosc-kc/keycloak licensee:
+      github.com/keycloak/keycloak licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-zucchini-tortoise.sh
-        container: qc.lic_slimy-mustard-cat
+        - /usr/bin/env sh .sqa/script.whiny-purple-chipmunk.sh
+        container: qc.lic_leaky-ultramarine-bee
+  QC.Sec:
+    repos:
+      github.com/keycloak/keycloak bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-taupe-tortoise.sh
+        container: qc.sec_jumpy-burgundy-budgerigar
   QC.Sty:
     repos:
-      github.com/eosc-kc/keycloak checkstyle:
+      github.com/keycloak/keycloak checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-peach-newfoundland.sh
-        container: qc.sty_clammy-chartreuse-hare
-      github.com/eosc-kc/keycloak hadolint:
+        - /usr/bin/env sh .sqa/script.slaphappy-red-albatross.sh
+        container: qc.sty_scanty-coral-iguana
+      github.com/keycloak/keycloak flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-cardinal-cheetah.sh
-        container: qc.sty_grumpy-blue-turtle
-      github.com/eosc-kc/keycloak jsonlint:
+        - /usr/bin/env sh .sqa/script.cranky-amber-paradise.sh
+        container: qc.sty_thirsty-cerise-walrus
+      github.com/keycloak/keycloak hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-chocolate-mole.sh
-        container: qc.sty_ugly-ruby-birman
+        - /usr/bin/env sh .sqa/script.surly-magnolia-dachshund.sh
+        container: qc.sty_scaly-taupe-bison
+      github.com/keycloak/keycloak jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lovely-pink-fox.sh
+        container: qc.sty_blurry-taupe-jellyfish
+  QC.Uni:
+    repos:
+      github.com/keycloak/keycloak pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.muggy-tomato-chinchilla.sh
+        container: qc.uni_paltry-vermilion-toucan
   QC.Ver:
     repos:
-      github.com/eosc-kc/keycloak get_git_tags.py:
+      github.com/keycloak/keycloak get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-ultramarine-skunk.sh
-        container: qc.ver_breezy-firebrick-duck
+        - /usr/bin/env sh .sqa/script.sleazy-ultramarine-eleuth.sh
+        container: qc.ver_blurry-smalt-beaver
 timeout: 5400
