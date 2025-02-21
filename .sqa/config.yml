@@ -15,62 +15,62 @@ sqa_criteria:
     repos:
       github.com/keycloak/keycloak git:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-turquoise-lizard.sh
-        container: qc.acc_breezy-viridian-wolf
+        - /usr/bin/env sh .sqa/script.chummy-cyan-kakapo.sh
+        container: qc.acc_messy-pear-chimpanzee
   QC.Doc:
     repos:
       github.com/keycloak/keycloak find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-razzmatazz-buzzard.sh
-        container: qc.doc_sunny-alizarin-warthog
+        - /usr/bin/env sh .sqa/script.stinky-vermilion-dunker.sh
+        container: qc.doc_lousy-dandelion-wolfhound
       github.com/keycloak/keycloak git:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-magnolia-leopard.sh
-        container: qc.doc_grumpy-xanthic-spitz
+        - /usr/bin/env sh .sqa/script.bumpy-thistle-sheepdog.sh
+        container: qc.doc_lousy-magnolia-uakari
       github.com/keycloak/keycloak markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-wisteria-monkey.sh
-        container: qc.doc_crabby-turquoise-lemur
+        - /usr/bin/env sh .sqa/script.smelly-brown-cattle.sh
+        container: qc.doc_hilly-cream-earwig
   QC.Lic:
     repos:
       github.com/keycloak/keycloak licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-purple-chipmunk.sh
-        container: qc.lic_leaky-ultramarine-bee
+        - /usr/bin/env sh .sqa/script.trippy-apricot-chamois.sh
+        container: qc.lic_pretty-saffron-booby
   QC.Sec:
     repos:
       github.com/keycloak/keycloak bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-taupe-tortoise.sh
-        container: qc.sec_jumpy-burgundy-budgerigar
+        - /usr/bin/env sh .sqa/script.tasty-russet-woodpecker.sh
+        container: qc.sec_craggy-scarlet-fowl
   QC.Sty:
     repos:
       github.com/keycloak/keycloak checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-red-albatross.sh
-        container: qc.sty_scanty-coral-iguana
+        - /usr/bin/env sh .sqa/script.jumpy-linen-stoat.sh
+        container: qc.sty_zippy-mauve-clam
       github.com/keycloak/keycloak flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-amber-paradise.sh
-        container: qc.sty_thirsty-cerise-walrus
+        - /usr/bin/env sh .sqa/script.hazy-charcoal-akbash.sh
+        container: qc.sty_skimpy-platinum-nightingale
       github.com/keycloak/keycloak hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-magnolia-dachshund.sh
-        container: qc.sty_scaly-taupe-bison
+        - /usr/bin/env sh .sqa/script.woozy-tan-lizard.sh
+        container: qc.sty_muggy-ecru-uakari
       github.com/keycloak/keycloak jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-pink-fox.sh
-        container: qc.sty_blurry-taupe-jellyfish
+        - /usr/bin/env sh .sqa/script.hazy-sangria-lizard.sh
+        container: qc.sty_shaky-persimmon-ragdoll
   QC.Uni:
     repos:
       github.com/keycloak/keycloak pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-tomato-chinchilla.sh
-        container: qc.uni_paltry-vermilion-toucan
+        - /usr/bin/env sh .sqa/script.slaphappy-mustard-okapi.sh
+        container: qc.uni_gloppy-taupe-bird
   QC.Ver:
     repos:
       github.com/keycloak/keycloak get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-ultramarine-eleuth.sh
-        container: qc.ver_blurry-smalt-beaver
+        - /usr/bin/env sh .sqa/script.tasty-ecru-flounder.sh
+        container: qc.ver_bluesy-sapphire-civet
 timeout: 5400
