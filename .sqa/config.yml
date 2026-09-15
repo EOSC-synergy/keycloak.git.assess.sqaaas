@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: feature/pynblint_fix
+      branch: fix/updatego
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/eosc-kc/keycloak:
       branch: master
@@ -15,62 +15,62 @@ sqa_criteria:
     repos:
       github.com/eosc-kc/keycloak git:
         commands:
-        - /usr/bin/env sh .sqa/script.bronze_visionary_gull.sh
-        container: qc.acc_polar_balanced_condor
+        - /usr/bin/env sh .sqa/script.claret_imaginative_quokka.sh
+        container: qc.acc_raven_confident_otter
   QC.Doc:
     repos:
       github.com/eosc-kc/keycloak find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cobalt_bright_emu.sh
-        container: qc.doc_umber_shrewd_crane
+        - /usr/bin/env sh .sqa/script.wisteria_tolerant_koala.sh
+        container: qc.doc_verdant_jubilant_seahorse
       github.com/eosc-kc/keycloak git:
         commands:
-        - /usr/bin/env sh .sqa/script.pine_bubbly_dhole.sh
-        container: qc.doc_plum_adventurous_antelope
+        - /usr/bin/env sh .sqa/script.dusk_methodical_barracuda.sh
+        container: qc.doc_arctic_ardent_vulture
       github.com/eosc-kc/keycloak markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.mahogany_loyal_lynx.sh
-        container: qc.doc_jet_serene_platypus
+        - /usr/bin/env sh .sqa/script.echelon_stoic_octopus.sh
+        container: qc.doc_lemon_zany_opossum
   QC.Lic:
     repos:
       github.com/eosc-kc/keycloak licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.cardamom_mindful_kangaroo.sh
-        container: qc.lic_cerulean_audacious_alligator
+        - /usr/bin/env sh .sqa/script.butter_relaxed_peacock.sh
+        container: qc.lic_red_friendly_porcupine
   QC.Sec:
     repos:
       github.com/eosc-kc/keycloak bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.mauve_hopeful_tapir.sh
-        container: qc.sec_navy_eager_narwhal
+        - /usr/bin/env sh .sqa/script.cornflower_attentive_elk.sh
+        container: qc.sec_royal_carefree_hornbill
   QC.Sty:
     repos:
       github.com/eosc-kc/keycloak checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.prussian_calm_shark.sh
-        container: qc.sty_strawberry_warm_kraken
+        - /usr/bin/env sh .sqa/script.kiwi_peaceful_moose.sh
+        container: qc.sty_claret_stubborn_vulture
       github.com/eosc-kc/keycloak flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.ginger_dramatic_wolf.sh
-        container: qc.sty_peach_warm_butterfly
+        - /usr/bin/env sh .sqa/script.grege_rational_sphinx.sh
+        container: qc.sty_cerise_bubbly_goose
       github.com/eosc-kc/keycloak hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.butter_impulsive_gorilla.sh
-        container: qc.sty_incarnadine_understanding_reindeer
+        - /usr/bin/env sh .sqa/script.rosewater_scrappy_kirin.sh
+        container: qc.sty_burgundy_diligent_tapir
       github.com/eosc-kc/keycloak jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.rosewater_imaginative_quokka.sh
-        container: qc.sty_aquamarine_outgoing_pegasus
+        - /usr/bin/env sh .sqa/script.isabelline_carefree_chinchilla.sh
+        container: qc.sty_polar_observant_coyote
   QC.Uni:
     repos:
       github.com/eosc-kc/keycloak pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.goldenrod_mindful_mongoose.sh
-        container: qc.uni_turquoise_affectionate_hyena
+        - /usr/bin/env sh .sqa/script.ultramarine_organized_echidna.sh
+        container: qc.uni_alabaster_independent_dugong
   QC.Ver:
     repos:
       github.com/eosc-kc/keycloak get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.indigo_graceful_gorilla.sh
-        container: qc.ver_cream_curious_wolverine
+        - /usr/bin/env sh .sqa/script.alabaster_lively_condor.sh
+        container: qc.ver_goldenrod_perceptive_anaconda
 timeout: 5400
